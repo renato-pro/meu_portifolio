@@ -1,55 +1,121 @@
 /* reset css*/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box; /* Remove espaços desnecessários */
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   /* Remove espaços desnecessários */
 
- }
+}
 
 /* Comentários */
 
- body{
-    background: #222; /* Cor do Fundo */
-    color: #e9bde9;
- }
- i{
-    color: rgb(255, 0, 200);
-    font-size: 30px;
- }
+body {
+   background: #222;
+   /* Cor do Fundo */
+   color: #e9bde9;
+}
 
- #header {
-    display: flex; /* Flexível, modelável */
-    flex-flow: row wrap; /* Quebra de Linha */
-    justify-content: space-between; /* Espaçamentos iguais */
-    align-items: center; /* Alinhar Verticalmente - Centro */
-    width: 100%; /* Largura da Página */
-    /* background-color: aqua; */
-    padding: 20px 200px 10px 0px;
-    z-index: 2;/* Congelar menu superior */
- }
+i {
+   color: rgb(255, 0, 200);
+   font-size: 30px;
+}
 
- .menu{
-      display: flex; /* Deixar em linha */
-      align-items: center;
-      background: rgb(16, 11, 11);
-      color: rgb(51, 218, 179); /* Cor do texto */
-      gap: 25px;
-      list-style: none; /* Remove as bolinhas do item */
+#header {
+   display: flex;
+   /* Flexível, modelável */
+   flex-flow: row wrap;
+   /* Quebra de Linha */
+   justify-content: space-between;
+   /* Espaçamentos iguais */
+   align-items: center;
+   /* Alinhar Verticalmente - Centro */
+   width: 100%;
+   /* Largura da Página */
+   /* background-color: aqua; */
+   padding: 20px 200px 10px 0px;
+   z-index: 2;
+   /* Congelar menu superior */
+}
 
- }
- .menu-item { /* Lista = li */
+.menu {
+   display: flex;
+   /* Deixar em linha */
+   align-items: center;
+   background: rgb(16, 11, 11);
+   color: rgb(51, 218, 179);
+   /* Cor do texto */
+   gap: 25px;
+   list-style: none;
+   /* Remove as bolinhas do item */
+
+}
+
+.menu-item {
+   /* Lista = li */
    width: 100%;
 
- }
+}
 
- .menu-link {
+.menu-link {
    display: flex;
    text-decoration: none;
 
- }
+}
 
- .menu-texto {
+.menu-texto {
    font-size: 20px;
    text-transform: uppercase;
 
- }
+}
+
+.menu-mobile .menu-link {
+   flex-direction: column;
+   /* Empilhar, pular linha */
+   justify-content: center;
+   padding: 15px 15px;
+
+}
+
+/* span = menu-texto */
+/* icone = iccone do BootStrap */
+.menu-link.active .menu-icone,
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-icone, /* passar o mouse em cima da ícone - realce */
+.menu-link:hover .menu-texto {
+   color: rgb(10, 228, 170);
+   font-weight: 800;
+}
+/* Textos não selecionados */
+.menu-icon,
+.menu-texto {
+   color: rgb(243, 248, 248);
+   font-weight: 100;
+}
+
+/* .menu-link .menu-icone:hover
+.menu-link .menu-texto:hover{
+   font-size: 30px;
+} */
+
+
+.menu-icone {
+   font-size: 30px;
+}
+
+.menu-principal {
+   gap: 20px
+}
+
+.header-nav {
+   display:;
+}
+
+/* CSS Responsivo */
+@media (min-with: 768px) { /* a partir de: 768 px */
+   #header {
+      position: fixed;
+      border-bottom: 1px solid white;
+
+   }
+}
+
